@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -112,6 +111,10 @@ export default {
 				"skill-progress": {
 					'0%': { width: '0%' },
 					'100%': { width: 'var(--progress)' }
+				},
+				"spin-slow": {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -122,7 +125,8 @@ export default {
 				'wave': 'wave 1.5s infinite',
 				'typing': 'typing 3.5s steps(40, end), blink .75s step-end infinite',
 				'gradient': 'gradient 15s ease infinite alternate',
-				"skill-progress": 'skill-progress 1s ease-out forwards'
+				"skill-progress": 'skill-progress 1s ease-out forwards',
+				"spin-slow": 'spin-slow 8s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

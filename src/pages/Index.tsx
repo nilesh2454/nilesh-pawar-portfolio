@@ -77,37 +77,67 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex flex-col justify-center relative pt-20 px-4 sm:px-6 lg:px-8">
         <div className="container max-w-7xl mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-4 sm:mb-6 inline-block">
-              <SocialLinks />
-            </div>
-            <h1 className="mb-4 sm:mb-6 opacity-0 animate-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{ animationDelay: "0.2s" }}>
-              <span className="gradient-text">Nilesh Dashrath Pawar</span>
-            </h1>
-            <div className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <CyclingTypedText />
-            </div>
-            <p className="text-muted-foreground text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto opacity-0 animate-fade-in px-4" style={{ animationDelay: "0.6s" }}>
-              Building enterprise-level Java applications with a focus on clean code, 
-              scalable architecture, and innovative AI integrations.
-            </p>
-            <div className="flex flex-col items-center w-full">
-              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                <Button size="lg" asChild className="w-full sm:w-auto">
-                  <a href="#contact">
-                    Get In Touch
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
-                  <a href="#projects">
-                    View My Work
-                  </a>
-                </Button>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Profile Image Section */}
+              <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+                <div className="relative group">
+                  {/* Animated background rings */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 animate-spin-slow opacity-75 blur-sm scale-110"></div>
+                  <div className="absolute inset-2 rounded-full bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-400 animate-pulse opacity-50 blur-sm"></div>
+                  
+                  {/* Profile image container */}
+                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Nilesh Dashrath Pawar - Java Developer"
+                      className="w-full h-full object-cover object-center"
+                    />
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  {/* Floating elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce opacity-80"></div>
+                  <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-purple-500 rounded-full animate-pulse opacity-60"></div>
+                  <div className="absolute top-1/4 -left-8 w-4 h-4 bg-indigo-400 rounded-full animate-ping opacity-40"></div>
+                </div>
               </div>
-              <div className="flex justify-center mt-6 w-full">
-                <a href="#about" aria-label="Scroll down">
-                  <ArrowDownIcon size={24} />
-                </a>
+
+              {/* Content Section */}
+              <div className="text-center lg:text-left order-2 lg:order-1">
+                <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start">
+                  <SocialLinks />
+                </div>
+                <h1 className="mb-4 sm:mb-6 opacity-0 animate-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ animationDelay: "0.2s" }}>
+                  <span className="gradient-text">Nilesh Dashrath Pawar</span>
+                </h1>
+                <div className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                  <CyclingTypedText />
+                </div>
+                <p className="text-muted-foreground text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto lg:mx-0 opacity-0 animate-fade-in px-4 lg:px-0" style={{ animationDelay: "0.6s" }}>
+                  Building enterprise-level Java applications with a focus on clean code, 
+                  scalable architecture, and innovative AI integrations.
+                </p>
+                <div className="flex flex-col items-center lg:items-start w-full opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start">
+                    <Button size="lg" asChild className="w-full sm:w-auto">
+                      <a href="#contact">
+                        Get In Touch
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                      <a href="#projects">
+                        View My Work
+                      </a>
+                    </Button>
+                  </div>
+                  <div className="flex justify-center lg:justify-start mt-6 w-full">
+                    <a href="#about" aria-label="Scroll down" className="animate-bounce">
+                      <ArrowDownIcon size={24} />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
