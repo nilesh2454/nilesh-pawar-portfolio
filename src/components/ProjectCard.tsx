@@ -52,18 +52,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
           <div className="flex flex-col gap-2 sm:gap-3">
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 w-full min-w-0">
               {project.githubUrl && (
-                <Button variant="outline" asChild className="flex-1 text-xs sm:text-sm">
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                <Button asChild className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4 flex-1 min-w-0 text-xs sm:text-sm">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full">
                     <GithubIcon size={14} />
                     <span>View Code</span>
                   </a>
                 </Button>
               )}
               {project.liveUrl && (
-                <Button asChild className="flex-1 text-xs sm:text-sm">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                <Button asChild className="bg-blue-600 text-white hover:bg-blue-700 h-10 py-2 px-4 flex-1 min-w-0 text-xs sm:text-sm">
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full">
                     <ExternalLink size={14} />
                     <span>Live Demo</span>
                   </a>
@@ -104,18 +104,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </span>
               ))}
             </div>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 w-full min-w-0">
               {project.githubUrl && (
-                <Button variant="outline" asChild className="flex-1 text-xs sm:text-sm">
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                <Button asChild className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4 flex-1 min-w-0 text-xs sm:text-sm">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full">
                     <GithubIcon size={16} />
                     <span className="text-sm">View Code</span>
                   </a>
                 </Button>
               )}
               {project.liveUrl && (
-                <Button asChild className="flex-1 text-xs sm:text-sm">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                <Button asChild className="bg-blue-600 text-white hover:bg-blue-700 h-10 py-2 px-4 flex-1 min-w-0 text-xs sm:text-sm">
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full">
                     <ExternalLink size={16} />
                     <span className="text-sm">Live Demo</span>
                   </a>

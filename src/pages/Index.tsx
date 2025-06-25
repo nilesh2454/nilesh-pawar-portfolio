@@ -43,7 +43,7 @@ const Index = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Room Finder",
+      title: "RoomMate",
       shortDescription: "A platform to find and book accommodations online",
       fullDescription: "Room Finder is a comprehensive platform that allows users to search, filter, and book accommodations based on their preferences. Built with Java Spring Boot for the backend and React for the frontend, it features user authentication, payment integration, and a review system. The application uses microservices architecture for scalability and implements RESTful APIs for seamless communication between services.",
       tags: ["Java", "Spring Boot", "Microservices", "REST API", "MySQL", "React"],
@@ -91,29 +91,25 @@ const Index = () => {
               Building enterprise-level Java applications with a focus on clean code, 
               scalable architecture, and innovative AI integrations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in px-4" style={{ animationDelay: "0.8s" }}>
-              <Button size="lg" asChild className="w-full sm:w-auto">
-                <a href="#contact">
-                  Get In Touch
+            <div className="flex flex-col items-center w-full">
+              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                <Button size="lg" asChild className="w-full sm:w-auto">
+                  <a href="#contact">
+                    Get In Touch
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                  <a href="#projects">
+                    View My Work
+                  </a>
+                </Button>
+              </div>
+              <div className="flex justify-center mt-6 w-full">
+                <a href="#about" aria-label="Scroll down">
+                  <ArrowDownIcon size={24} />
                 </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
-                <a href="#projects">
-                  View My Work
-                </a>
-              </Button>
+              </div>
             </div>
-            <div className="flex justify-center mt-6 sm:hidden">
-              <a href="#about" aria-label="Scroll down">
-                <ArrowDownIcon size={24} />
-              </a>
-            </div>
-          </div>
-
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-75 hidden sm:block">
-            <a href="#about" aria-label="Scroll down">
-              <ArrowDownIcon size={24} />
-            </a>
           </div>
         </div>
       </section>
