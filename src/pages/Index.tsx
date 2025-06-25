@@ -6,7 +6,7 @@ import ProjectCard, { Project } from "@/components/ProjectCard";
 import TimelineItem from "@/components/TimelineItem";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
-import { ArrowDownIcon, Code, Brain, CircuitBoard, Mail, Linkedin } from "lucide-react";
+import { Code, Brain, CircuitBoard, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -109,34 +109,38 @@ const Index = () => {
                 <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start">
                   <SocialLinks />
                 </div>
+                
+                {/* Hello Introduction */}
+                <div className="mb-2 sm:mb-3 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                  <span className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light tracking-wide">
+                    Hello, I am
+                  </span>
+                </div>
+                
                 <h1 className="mb-4 sm:mb-6 opacity-0 animate-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ animationDelay: "0.2s" }}>
-                  <span className="gradient-text">Nilesh Dashrath Pawar</span>
+                  <span className="gradient-text font-bold">Nilesh Dashrath Pawar</span>
                 </h1>
+                
                 <div className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
                   <CyclingTypedText />
                 </div>
+                
                 <p className="text-muted-foreground text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto lg:mx-0 opacity-0 animate-fade-in px-4 lg:px-0" style={{ animationDelay: "0.6s" }}>
                   Building enterprise-level Java applications with a focus on clean code, 
                   scalable architecture, and innovative AI integrations.
                 </p>
-                <div className="flex flex-col items-center lg:items-start w-full opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-                  <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start">
-                    <Button size="lg" asChild className="w-full sm:w-auto">
-                      <a href="#contact">
-                        Get In Touch
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
-                      <a href="#projects">
-                        View My Work
-                      </a>
-                    </Button>
-                  </div>
-                  <div className="flex justify-center lg:justify-start mt-6 w-full">
-                    <a href="#about" aria-label="Scroll down" className="animate-bounce">
-                      <ArrowDownIcon size={24} />
+                
+                <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+                  <Button size="lg" asChild className="w-full sm:w-auto">
+                    <a href="#contact">
+                      Get In Touch
                     </a>
-                  </div>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                    <a href="#projects">
+                      View My Work
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
