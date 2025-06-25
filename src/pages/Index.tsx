@@ -8,6 +8,7 @@ import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
 import { Code, Brain, CircuitBoard, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePic from "../images/profilePic.png";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -89,7 +90,7 @@ const Index = () => {
                   {/* Profile image container */}
                   <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300">
                     <img
-                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      src={profilePic}
                       alt="Nilesh Dashrath Pawar - Java Developer"
                       className="w-full h-full object-cover object-center"
                     />
