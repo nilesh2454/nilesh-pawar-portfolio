@@ -74,6 +74,14 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
+            {/* Download Resume Button */}
+            <a
+              href="/resume/resume.pdf"
+              download="Nilesh Pawar Resume.pdf"
+              className="ml-2 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition-colors text-sm flex items-center"
+            >
+              Download Resume
+            </a>
             <Button
               variant="ghost"
               size="icon"
