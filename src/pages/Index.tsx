@@ -6,7 +6,7 @@ import ProjectCard, { Project } from "@/components/ProjectCard";
 import TimelineItem from "@/components/TimelineItem";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
-import { Code, Brain, CircuitBoard, Mail, Linkedin } from "lucide-react";
+import { Code, Brain, CircuitBoard, Mail, Linkedin, Phone, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePic from "../images/profilePic.png";
 
@@ -76,27 +76,28 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col justify-center relative pt-20 px-4 sm:px-6 lg:px-8">
+      <section id="home" className="min-h-screen flex flex-col justify-start relative pt-24 px-4 sm:px-6 lg:px-8">
         <div className="container max-w-7xl mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Profile Image Section */}
-              <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+              <div className="flex justify-center items-center lg:justify-end order-1 lg:order-2">
                 <div className="relative group">
-                  {/* Animated background rings */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 animate-spin-slow opacity-75 blur-sm scale-110"></div>
-                  <div className="absolute inset-2 rounded-full bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-400 animate-pulse opacity-50 blur-sm"></div>
-                  
+                  {/* Removed animated background rings */}
                   {/* Profile image container */}
-                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300">
+                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
                     <img
                       src={profilePic}
                       alt="Nilesh Dashrath Pawar - Java Developer"
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-center mx-auto"
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
+                  {/* Social links below profile image */}
+                  <div className="flex justify-center mt-6">
+              <SocialLinks />
+            </div>
                   
                   {/* Floating elements */}
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce opacity-80"></div>
@@ -107,42 +108,38 @@ const Index = () => {
 
               {/* Content Section */}
               <div className="text-center lg:text-left order-2 lg:order-1">
-                <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start">
-                  <SocialLinks />
-                </div>
-                
                 {/* Hello Introduction */}
                 <div className="mb-2 sm:mb-3 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                  <span className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light tracking-wide">
+                  <span className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light tracking-wide flex items-center justify-center lg:justify-start gap-2">
                     Hello, I am
                   </span>
                 </div>
                 
                 <h1 className="mb-4 sm:mb-6 opacity-0 animate-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ animationDelay: "0.2s" }}>
                   <span className="gradient-text font-bold">Nilesh Dashrath Pawar</span>
-                </h1>
+            </h1>
                 
-                <div className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                  <CyclingTypedText />
-                </div>
+            <div className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <CyclingTypedText />
+            </div>
                 
                 <p className="text-muted-foreground text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto lg:mx-0 opacity-0 animate-fade-in px-4 lg:px-0" style={{ animationDelay: "0.6s" }}>
-                  Building enterprise-level Java applications with a focus on clean code, 
-                  scalable architecture, and innovative AI integrations.
-                </p>
+              Building enterprise-level Java applications with a focus on clean code, 
+              scalable architecture, and innovative AI integrations.
+            </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-                  <Button size="lg" asChild className="w-full sm:w-auto">
-                    <a href="#contact">
-                      Get In Touch
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
-                    <a href="#projects">
-                      View My Work
-                    </a>
-                  </Button>
-                </div>
+                <div className="flex flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+                <Button size="lg" asChild className="w-full sm:w-auto">
+                  <a href="#contact">
+                    Get In Touch
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                  <a href="#projects">
+                    View My Work
+                  </a>
+                </Button>
+              </div>
               </div>
             </div>
           </div>
@@ -433,16 +430,44 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 sm:py-8 bg-secondary/80 backdrop-blur-sm px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
-          <div className="text-center">
+      <footer className="py-6 bg-black backdrop-blur-sm px-4 sm:px-6 lg:px-8 border-t border-border mt-12">
+        <div className="container max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8">
+          {/* Contact Us Section (left) */}
+          <div className="flex flex-col gap-2 items-center md:items-start w-full md:w-auto mb-8 md:mb-0">
+            <span className="text-white font-semibold text-base mb-1">Contact Us</span>
+            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+              <Mail className="h-5 w-5 text-primary" />
+              <a href="mailto:contact@nileshpawar.dev" className="hover:underline">contact@nileshpawar.dev</a>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+              <Phone className="h-5 w-5 text-primary" />
+              <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
+            </div>
+          </div>
+          {/* Connect with me (right) */}
+          <div className="flex flex-col items-center md:items-end gap-2 w-full md:w-auto">
+            <span className="text-white font-semibold text-base mb-2">Connect with me</span>
+            <div className="flex gap-4">
+              <a href="https://linkedin.com/in/nileshpawar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition">
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="https://github.com/nileshpawar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition">
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.299 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition">
+                <Instagram className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* Copyright at the very bottom, centered */}
+        <div className="pt-4 text-center w-full">
             <p className="text-muted-foreground text-xs sm:text-sm">
               © {new Date().getFullYear()} Nilesh Dashrath Pawar. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              Designed with ❤️ and modern web technologies
+          <p className="text-xs text-muted-foreground mt-1">
+            Designed with <span className="text-primary">❤️</span> and modern web technologies
             </p>
-          </div>
         </div>
       </footer>
     </div>
