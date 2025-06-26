@@ -1,5 +1,4 @@
-
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
@@ -13,28 +12,22 @@ export default function SocialLinks({ className, size = "default" }: SocialLinkP
   
   const links = [
     {
-      name: "Email",
-      icon: <Mail size={iconSize} />,
-      href: "mailto:contact@nileshpawar.dev",
-      className: "bg-red-500 hover:bg-red-600",
-    },
-    {
       name: "LinkedIn",
       icon: <Linkedin size={iconSize} />,
-      href: "https://linkedin.com/in/nileshpawar",
+      href: "https://www.linkedin.com/in/nilesh-pawar-33aaa7287",
       className: "bg-blue-600 hover:bg-blue-700",
     },
     {
       name: "GitHub",
       icon: <Github size={iconSize} />,
-      href: "https://github.com/nileshpawar",
+      href: "https://github.com/nilesh2454",
       className: "bg-gray-800 hover:bg-gray-900",
     },
     {
-      name: "Resume",
-      icon: <FileText size={iconSize} />,
-      href: "#",
-      className: "bg-emerald-600 hover:bg-emerald-700",
+      name: "Instagram",
+      icon: <Instagram size={iconSize} />,
+      href: "https://www.instagram.com/tech_ndp?igsh=dHBtZHczbnh4ZDk=",
+      className: "bg-pink-500 hover:bg-pink-600",
     },
   ];
   

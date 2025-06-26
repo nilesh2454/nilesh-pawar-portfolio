@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, FileText } from "lucide-react";
 import { Button } from "./ui/button";
 
 const navItems = [
@@ -62,31 +62,37 @@ const Navbar = () => {
             Nilesh.dev
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-4 items-center">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded transition font-medium cursor-pointer"
-                onClick={handleNavClick(item.href)}
-              >
-                {item.label}
-              </a>
-            ))}
-            {/* Download Resume Button */}
+          {/* Desktop and Mobile Controls */}
+          <div className="flex items-center space-x-2 md:space-x-4">
+            {/* Desktop Nav */}
+            <div className="hidden md:flex space-x-4 items-center">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded transition font-medium cursor-pointer"
+                  onClick={handleNavClick(item.href)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            {/* Download Resume Button (always visible, order before hamburger) */}
             <a
               href="/resume/resume.pdf"
               download="Nilesh Pawar Resume.pdf"
-              className="ml-2 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition-colors text-sm flex items-center"
+              className="flex flex-row items-center gap-2 px-3 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow transition-colors text-sm order-1 whitespace-nowrap"
+              style={{ display: 'inline-flex' }}
             >
-              Download Resume
+              <FileText className="w-4 h-4" />
+              <span>Resume</span>
             </a>
+            {/* Dark/Light Mode Button (desktop only) */}
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-full ml-2 cursor-pointer"
+              className="rounded-full ml-2 cursor-pointer order-2 hidden md:inline-flex"
               aria-label="Toggle theme"
             >
               {theme === "light" ? (
@@ -95,19 +101,18 @@ const Navbar = () => {
                 <Sun className="h-5 w-5 text-gray-200" />
               )}
             </Button>
-          </div>
-
-          {/* Mobile Hamburger */}
-          <div className="md:hidden flex items-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
+            {/* Mobile Hamburger */}
+            <div className="md:hidden flex items-center order-3">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -126,11 +131,20 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
+            {/* Download Resume Button in Mobile Dropdown */}
+            <a
+              href="/resume/resume.pdf"
+              download="Nilesh Pawar Resume.pdf"
+              className="block w-full mt-2 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition-colors text-base text-center"
+            >
+              Download Resume
+            </a>
+            {/* Dark/Light Mode Button in Mobile Dropdown */}
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-full mt-2 ml-1 cursor-pointer"
+              className="rounded-full mt-2 ml-1 cursor-pointer w-full flex justify-center"
               aria-label="Toggle theme"
             >
               {theme === "light" ? (

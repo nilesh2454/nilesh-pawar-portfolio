@@ -68,7 +68,16 @@ const Index = () => {
       tags: ["Java", "Spring Framework", "WebSockets", "MongoDB", "OAuth", "Docker"],
       githubUrl: "#",
       liveUrl: "#"
-    }
+    },
+    {
+      id: 4,
+      title: "Pre-Placement Website",
+      shortDescription: "A platform that gives information about various pre-placement activities conducted for students",
+      fullDescription: "A platform that gives information about various pre-placement activities conducted for students. The website provides details, schedules, and resources for students to prepare for placement opportunities.",
+      tags: ["HTML", "Tailwind CSS", "React", "shadcn ui", "TypeScript"],
+      githubUrl: "https://github.com/nilesh2454/ppac-website",
+      liveUrl: "https://pre-placement-website.vercel.app/"
+    },
   ];
 
   return (
@@ -387,7 +396,7 @@ const Index = () => {
             </div>
             
             <div className="card-gradient rounded-xl p-6 sm:p-8 shadow-lg flex flex-col">
-              <h3 className="text-lg sm:text-xl font-bold mb-6">Connect With Me</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-6">Contact me on</h3>
               <p className="text-muted-foreground mb-8 text-sm sm:text-base">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
@@ -399,20 +408,20 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-sm sm:text-base">Email</h4>
-                    <a href="mailto:contact@nileshpawar.dev" className="text-primary hover:underline text-xs sm:text-sm break-all">
-                      contact@nileshpawar.dev
+                    <a href="mailto:nileshdpawar1212@gmail.com" className="text-primary hover:underline text-xs sm:text-sm break-all">
+                    nileshdpawar1212@gmail.com
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-primary flex-shrink-0">
-                    <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm sm:text-base">LinkedIn</h4>
-                    <a href="https://linkedin.com/in/nileshpawar" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-xs sm:text-sm break-all">
-                      linkedin.com/in/nileshpawar
+                    <h4 className="font-semibold text-sm sm:text-base">Contact Number</h4>
+                    <a href="tel:8010532454" className="text-primary hover:underline text-xs sm:text-sm break-all">
+                      +918010532454
                     </a>
                   </div>
                 </div>
@@ -431,35 +440,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="py-6 bg-black backdrop-blur-sm px-4 sm:px-6 lg:px-8 border-t border-border mt-12">
-        <div className="container max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8">
-          {/* Contact Us Section (left) */}
-          <div className="flex flex-col gap-2 items-center md:items-start w-full md:w-auto mb-8 md:mb-0">
-            <span className="text-white font-semibold text-base mb-1">Contact Us</span>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <Mail className="h-5 w-5 text-primary" />
-              <a href="mailto:contact@nileshpawar.dev" className="hover:underline">contact@nileshpawar.dev</a>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <Phone className="h-5 w-5 text-primary" />
-              <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
-            </div>
-          </div>
-          {/* Connect with me (right) */}
-          <div className="flex flex-col items-center md:items-end gap-2 w-full md:w-auto">
-            <span className="text-white font-semibold text-base mb-2">Connect with me</span>
-            <div className="flex gap-4">
-              <a href="https://linkedin.com/in/nileshpawar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition">
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a href="https://github.com/nileshpawar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition">
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.299 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-              <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition">
-                <Instagram className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Removed Contact Us and Connect with me sections from footer */}
         {/* Copyright at the very bottom, centered */}
         <div className="pt-4 text-center w-full">
             <p className="text-muted-foreground text-xs sm:text-sm">
