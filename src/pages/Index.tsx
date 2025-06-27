@@ -85,16 +85,15 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col justify-start relative pt-24 px-4 sm:px-6 lg:px-8">
+      <section id="home" className="min-h-screen flex flex-col justify-start relative pt-24 px-2 sm:px-6 lg:px-8">
         <div className="container max-w-7xl mx-auto">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-8 lg:gap-x-12 items-center">
               {/* Profile Image Section */}
               <div className="flex justify-center items-center lg:justify-end order-1 lg:order-2">
-                <div className="relative group">
-                  {/* Removed animated background rings */}
+                <div className="relative group w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto">
                   {/* Profile image container */}
-                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                  <div className="relative w-full aspect-square rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl group-hover:scale-105 transition-transform duration-300 flex items-center justify-center mx-auto">
                     <img
                       src={profilePic}
                       alt="Nilesh Dashrath Pawar - Java Developer"
@@ -107,7 +106,6 @@ const Index = () => {
                   <div className="flex justify-center mt-6">
               <SocialLinks />
             </div>
-                  
                   {/* Floating elements */}
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce opacity-80"></div>
                   <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-purple-500 rounded-full animate-pulse opacity-60"></div>
@@ -116,28 +114,24 @@ const Index = () => {
               </div>
 
               {/* Content Section */}
-              <div className="text-center lg:text-left order-2 lg:order-1">
+              <div className="text-center lg:text-left order-2 lg:order-1 px-2">
                 {/* Hello Introduction */}
                 <div className="mb-2 sm:mb-3 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
                   <span className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light tracking-wide flex items-center justify-center lg:justify-start gap-2">
                     Hello, I am
                   </span>
                 </div>
-                
                 <h1 className="mb-4 sm:mb-6 opacity-0 animate-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl" style={{ animationDelay: "0.2s" }}>
                   <span className="gradient-text font-bold">Nilesh Dashrath Pawar</span>
             </h1>
-                
             <div className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <CyclingTypedText />
             </div>
-                
-                <p className="text-muted-foreground text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto lg:mx-0 opacity-0 animate-fade-in px-4 lg:px-0" style={{ animationDelay: "0.6s" }}>
+                <p className="text-muted-foreground text-base sm:text-lg lg:text-xl mb-8 sm:mb-10 max-w-3xl mx-auto lg:mx-0 opacity-0 animate-fade-in px-2 lg:px-0" style={{ animationDelay: "0.6s" }}>
               Building enterprise-level Java applications with a focus on clean code, 
               scalable architecture, and innovative AI integrations.
             </p>
-                
-                <div className="flex flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+                <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto justify-center lg:justify-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s" }}>
                 <Button size="lg" asChild className="w-full sm:w-auto">
                   <a href="#contact">
                     Get In Touch

@@ -64,18 +64,18 @@ const Navbar = () => {
 
           {/* Desktop and Mobile Controls */}
           <div className="flex items-center space-x-2 md:space-x-4">
-            {/* Desktop Nav */}
-            <div className="hidden md:flex space-x-4 items-center">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded transition font-medium cursor-pointer"
-                  onClick={handleNavClick(item.href)}
-                >
-                  {item.label}
-                </a>
-              ))}
+          {/* Desktop Nav */}
+          <div className="hidden md:flex space-x-4 items-center">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded transition font-medium cursor-pointer"
+                onClick={handleNavClick(item.href)}
+              >
+                {item.label}
+              </a>
+            ))}
             </div>
             {/* Download Resume Button (always visible, order before hamburger) */}
             <a
@@ -101,18 +101,18 @@ const Navbar = () => {
                 <Sun className="h-5 w-5 text-gray-200" />
               )}
             </Button>
-            {/* Mobile Hamburger */}
+          {/* Mobile Hamburger */}
             <div className="md:hidden flex items-center order-3">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
-                aria-label="Toggle menu"
-              >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </Button>
-            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
           </div>
         </div>
       </div>
@@ -125,27 +125,23 @@ const Navbar = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-3 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition cursor-pointer"
+                className="block px-3 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 focus:bg-blue-100 dark:focus:bg-blue-900 active:bg-blue-200 dark:active:bg-blue-800 hover:text-blue-700 dark:hover:text-blue-300 transition cursor-pointer focus:outline-none"
                 onClick={handleNavClick(item.href)}
+                tabIndex={0}
               >
                 {item.label}
               </a>
             ))}
-            {/* Download Resume Button in Mobile Dropdown */}
-            <a
-              href="/resume/resume.pdf"
-              download="Nilesh Pawar Resume.pdf"
-              className="block w-full mt-2 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition-colors text-base text-center"
-            >
-              Download Resume
-            </a>
-            {/* Dark/Light Mode Button in Mobile Dropdown */}
+            {/* Dark/Light Mode Button in Mobile Dropdown (icon only, full-width like other nav options, blue background on click/hover/focus) */}
             <Button
               variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="rounded-full mt-2 ml-1 cursor-pointer w-full flex justify-center"
+              onClick={e => {
+                e.currentTarget.focus();
+                toggleTheme();
+              }}
+              className="block w-full text-left px-3 py-2 rounded text-base font-medium hover:bg-blue-100 dark:hover:bg-blue-900 focus:bg-blue-100 dark:focus:bg-blue-900 active:bg-blue-200 dark:active:bg-blue-800 focus:outline-none"
               aria-label="Toggle theme"
+              tabIndex={0}
             >
               {theme === "light" ? (
                 <Moon className="h-5 w-5 text-gray-700" />
