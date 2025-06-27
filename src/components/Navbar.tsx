@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="main-navbar" className="bg-white dark:bg-gray-900 shadow sticky top-0 z-50 border-b border-border">
+    <nav id="main-navbar" className="glass-navbar sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -119,7 +119,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t shadow">
+        <div className="md:hidden glass-navbar-mobile fixed left-0 top-16 w-full z-50">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <a
