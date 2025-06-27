@@ -6,7 +6,7 @@ import ProjectCard, { Project } from "@/components/ProjectCard";
 import TimelineItem from "@/components/TimelineItem";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
-import { Code, Brain, CircuitBoard, Mail, Linkedin, Phone, Instagram } from "lucide-react";
+import { Code, Brain, CircuitBoard, Mail, Linkedin, Phone, Instagram, Database, Globe, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePic from "../images/profilePic.png";
 
@@ -21,23 +21,41 @@ const Index = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Technical Skills
-  const technicalSkills = [
+  // Programming Languages
+  const programmingSkills = [
     { name: "Java", percentage: 95 },
-    { name: "Spring Boot", percentage: 90 },
-    { name: "Microservices", percentage: 85 },
-    { name: "SQL/NoSQL", percentage: 88 },
-    { name: "REST API", percentage: 92 },
-    { name: "Docker/Kubernetes", percentage: 80 },
+    { name: "JavaScript", percentage: 90 },
+    { name: "C++", percentage: 75 },
+    { name: "Python", percentage: 70 },
+    { name: "Go", percentage: 65 },
   ];
 
-  // AI Skills
-  const aiSkills = [
-    { name: "Machine Learning", percentage: 82 },
-    { name: "Natural Language Processing", percentage: 78 },
-    { name: "Data Analysis", percentage: 85 },
-    { name: "Computer Vision", percentage: 74 },
-    { name: "TensorFlow/PyTorch", percentage: 75 },
+  // Frontend Technologies
+  const frontendSkills = [
+    { name: "React.js", percentage: 88 },
+    { name: "HTML5/CSS3", percentage: 92 },
+    { name: "Tailwind CSS", percentage: 85 },
+    { name: "Bootstrap", percentage: 80 },
+  ];
+
+  // Backend & Frameworks
+  const backendSkills = [
+    { name: "Spring Boot", percentage: 90 },
+    { name: "Node.js", percentage: 85 },
+    { name: "Express.js", percentage: 82 },
+    { name: "REST APIs", percentage: 92 },
+    { name: "Django", percentage: 70 },
+    { name: "Microservices", percentage: 80 },
+  ];
+
+  // Database & DevOps
+  const databaseDevOpsSkills = [
+    { name: "MongoDB", percentage: 85 },
+    { name: "MySQL", percentage: 88 },
+    { name: "PostgreSQL", percentage: 82 },
+    { name: "Docker", percentage: 78 },
+    { name: "Git/GitHub", percentage: 90 },
+    { name: "Hibernate", percentage: 80 },
   ];
 
   // Projects Data
@@ -238,12 +256,13 @@ const Index = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto">
+            {/* Programming Languages */}
             <div className="card-gradient rounded-xl p-6 sm:p-8 shadow-lg">
               <h3 className="text-lg sm:text-xl font-bold mb-6 flex items-center">
                 <Code className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                Technical Skills
+                Programming Languages
               </h3>
-              {technicalSkills.map((skill, index) => (
+              {programmingSkills.map((skill, index) => (
                 <SkillBar 
                   key={index} 
                   name={skill.name} 
@@ -252,12 +271,43 @@ const Index = () => {
               ))}
             </div>
             
+            {/* Frontend Technologies */}
             <div className="card-gradient rounded-xl p-6 sm:p-8 shadow-lg">
               <h3 className="text-lg sm:text-xl font-bold mb-6 flex items-center">
-                <Brain className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" />
-                AI & ML Skills
+                <Globe className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                Frontend Technologies
               </h3>
-              {aiSkills.map((skill, index) => (
+              {frontendSkills.map((skill, index) => (
+                <SkillBar 
+                  key={index} 
+                  name={skill.name} 
+                  percentage={skill.percentage} 
+                />
+              ))}
+            </div>
+
+            {/* Backend & Frameworks */}
+            <div className="card-gradient rounded-xl p-6 sm:p-8 shadow-lg">
+              <h3 className="text-lg sm:text-xl font-bold mb-6 flex items-center">
+                <Server className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                Backend & Frameworks
+              </h3>
+              {backendSkills.map((skill, index) => (
+                <SkillBar 
+                  key={index} 
+                  name={skill.name} 
+                  percentage={skill.percentage} 
+                />
+              ))}
+            </div>
+
+            {/* Database & DevOps */}
+            <div className="card-gradient rounded-xl p-6 sm:p-8 shadow-lg">
+              <h3 className="text-lg sm:text-xl font-bold mb-6 flex items-center">
+                <Database className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                Database & DevOps
+              </h3>
+              {databaseDevOpsSkills.map((skill, index) => (
                 <SkillBar 
                   key={index} 
                   name={skill.name} 
